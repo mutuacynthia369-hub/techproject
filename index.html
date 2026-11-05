@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Discover thoughtfully selected tech, everyday essentials, and the latest electronics at Veyronix."
+      content="Discover thoughtfully selected tech, everyday essentials, and the latest electronics at TECHZONE."
     />
     <meta name="theme-color" content="#f6f7f5" />
-    <title>Veyronix — A better kind of tech store</title>
+    <title>TECHZONE — A better kind of tech store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +26,7 @@
 
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="#" aria-label="Veyronix home">
+        <a class="brand" href="#" aria-label="TECHZONE home">
           <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
           <span>tech<span class="brand-light">zone</span></span>
         </a>
@@ -38,14 +38,15 @@
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#products">Shop</a>
           <a href="#categories">Categories</a>
-          <a href="#why-veyronix">Our story</a>
+          <a href="#orders">My orders</a>
+          <a href="#why-corevix">Our story</a>
           <a href="#newsletter">Journal</a>
         </nav>
 
         <div class="header-actions">
           <form class="search-form" role="search">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 4.2 4.2" /></svg>
-            <input id="product-search" type="search" placeholder="Search products..." aria-label="Search products" />
+            <input id="product-search" type="search" placeholder="Search by name, category, or brand..." aria-label="Search by product name, category, or brand" />
             <kbd>/</kbd>
           </form>
           <button class="icon-button wishlist-shortcut" type="button" aria-label="View wishlist">
@@ -139,6 +140,7 @@
                 <button class="filter-tab" type="button" data-filter="Audio">Audio</button>
                 <button class="filter-tab" type="button" data-filter="Workspace">Workspace</button>
                 <button class="filter-tab" type="button" data-filter="Everyday">Everyday</button>
+                <button class="filter-tab" type="button" data-filter="Gaming">Gaming</button>
               </div>
               <label class="sort-select-wrap">
                 <span class="sr-only">Sort products</span>
@@ -152,12 +154,21 @@
             </div>
           </div>
           <div class="product-grid" id="product-grid" aria-live="polite"></div>
-          <p class="empty-state" hidden>No products match that search. Try another word.</p>
+          <p class="empty-state" hidden>No products are available right now. Please check back soon.</p>
           <div class="products-footer"><span>GOOD THINGS, PICKED WITH PURPOSE.</span><a class="text-link" href="#newsletter">How we pick <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
 
-      <section class="story-section page-width" id="why-veyronix">
+      <section class="orders-section page-width" id="orders" aria-labelledby="orders-heading">
+        <div class="section-heading">
+          <div><span class="eyebrow">YOUR ORDER HISTORY</span><h2 id="orders-heading">Orders, all in one place.</h2></div>
+          <span class="orders-demo-note">Saved in this browser · Demo orders only</span>
+        </div>
+        <p class="orders-empty">You haven't placed any orders from this browser yet.</p>
+        <div class="order-list" aria-live="polite"></div>
+      </section>
+
+      <section class="story-section page-width" id="why-corevix">
         <div class="story-visual">
           <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Team collaborating around a table with their favorite technology" loading="lazy" />
           <div class="story-stamp"><span>LESS SCROLLING.</span><strong>More<br />living.</strong><span>THAT'S THE IDEA.</span></div>
@@ -186,8 +197,55 @@
         <form class="newsletter-form">
           <label for="newsletter-email">Your email address</label>
           <div class="newsletter-input-wrap"><input id="newsletter-email" type="email" placeholder="you@example.com" required /><button class="button button-dark" type="submit">Count me in <span aria-hidden="true">→</span></button></div>
-          <p class="newsletter-message" aria-live="polite">By subscribing, you agree to our very reasonable emails. Unsubscribe whenever.</p>
+          <p class="newsletter-message" aria-live="polite">Your email is saved in this browser only; it is not sent to an email service.</p>
         </form>
+      </section>
+
+      <section class="info-section page-width" id="faqs" aria-labelledby="faq-heading">
+        <span class="eyebrow">HERE TO HELP</span>
+        <h2 id="faq-heading">Frequently asked questions</h2>
+        <div class="info-grid">
+          <details><summary>Can I pay with M-Pesa?</summary><p>Checkout records a local demo order with payment pending. It does not send an M-Pesa request or take payment.</p></details>
+          <details><summary>Does my shopping bag stay saved?</summary><p>Your bag and wishlist are saved in this browser on this device. Clearing this site's browser data removes them.</p></details>
+          <details><summary>How do I find a product?</summary><p>Search by product name, category, or brand, or use the category filters. Search results update as you type.</p></details>
+          <details><summary>Are orders shipped or fulfilled?</summary><p>No. Orders are saved only in this browser for demonstration. No payment, shipment, or fulfillment takes place.</p></details>
+        </div>
+      </section>
+
+      <section class="info-section info-section-muted" id="shipping-returns" aria-labelledby="shipping-heading">
+        <div class="page-width">
+          <span class="eyebrow">DELIVERY INFORMATION</span>
+          <h2 id="shipping-heading">Shipping &amp; returns</h2>
+          <div class="info-copy">
+            <p>This site saves demo orders in your browser. It does not calculate delivery charges, accept payments, ship products, or process returns.</p>
+            <p>Before enabling real sales, TECHZONE must publish delivery areas, delivery estimates, applicable charges, return eligibility, and a working support contact.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-section page-width" id="privacy" aria-labelledby="privacy-heading">
+        <span class="eyebrow">YOUR INFORMATION</span>
+        <h2 id="privacy-heading">Privacy policy</h2>
+        <div class="info-copy">
+          <p>This demo does not have a server-side account, order, or mailing-list service. Product search runs in your browser. Your shopping bag, wishlist, order history, and checkout details are stored in this browser's local storage.</p>
+          <p>Order records include the name, phone, email, delivery address, products, and order status you provide. They are stored locally on this device and are not sent to TECHZONE. Do not enter sensitive personal information in this demo. To remove locally saved data, clear this site's browser storage.</p>
+          <p>If you submit the newsletter form, your email address is saved in this browser only. It is not sent to TECHZONE or an email provider, and no newsletter will be sent.</p>
+          <p>The page loads fonts from Google Fonts and product imagery from Unsplash; those providers may receive the usual connection information when your browser requests those assets.</p>
+        </div>
+      </section>
+
+      <section class="info-section info-section-muted" id="terms" aria-labelledby="terms-heading">
+        <div class="page-width">
+          <span class="eyebrow">PLEASE NOTE</span>
+          <h2 id="terms-heading">Terms of use</h2>
+          <div class="info-copy"><p>TECHZONE is presented as a non-transactional storefront demo. Product listings, prices, ratings, shipping benefits, and checkout interactions are for demonstration and do not constitute an offer to sell. Checkout creates only a local demo record; it does not accept payment or create a real sale.</p></div>
+        </div>
+      </section>
+
+      <section class="info-section page-width" id="accessibility" aria-labelledby="accessibility-heading">
+        <span class="eyebrow">INCLUSIVE BY DESIGN</span>
+        <h2 id="accessibility-heading">Accessibility</h2>
+        <div class="info-copy"><p>The storefront includes semantic headings and controls, labels for form fields, keyboard-operable buttons, and reduced-motion support. If you encounter an accessibility barrier, this demo currently has no support channel; a contact method should be added before launch.</p></div>
       </section>
     </main>
 
@@ -195,19 +253,107 @@
       <div class="page-width">
         <div class="footer-main">
           <div class="footer-brand"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>tech<span class="brand-light">zone</span></span></a><p>Good tech for your actual life.<br />Thoughtfully picked, always.</p></div>
-          <div class="footer-links"><div><strong>Explore</strong><a href="#products">Shop all</a><a href="#categories">Categories</a><a href="#why-veyronix">Our story</a></div><div><strong>Here for you</strong><a href="#newsletter">Contact us</a><a href="#newsletter">Shipping &amp; returns</a><a href="#newsletter">FAQs</a></div><div><strong>The fine print</strong><a href="#newsletter">Privacy</a><a href="#newsletter">Terms</a><a href="#newsletter">Accessibility</a></div></div>
+          <div class="footer-links"><div><strong>Explore</strong><a href="#products">Shop all</a><a href="#categories">Categories</a><a href="#why-corevix">Our story</a></div><div><strong>Here for you</strong><a href="#faqs">Help &amp; FAQs</a><a href="#shipping-returns">Shipping &amp; returns</a><a href="#faqs">FAQs</a></div><div><strong>The fine print</strong><a href="#privacy">Privacy policy</a><a href="#terms">Terms of use</a><a href="#accessibility">Accessibility</a></div></div>
         </div>
-        <div class="footer-bottom"><span>© 2025 VEYRONIX. GOOD TECH. BETTER DAYS.</span><span>MADE FOR THE WAY YOU LIVE <span aria-hidden="true">✳</span></span></div>
+        <div class="footer-bottom"><span>© 2025 TECHZONE. GOOD TECH. BETTER DAYS.</span><span>MADE FOR THE WAY YOU LIVE <span aria-hidden="true">✳</span></span></div>
       </div>
     </footer>
 
     <div class="overlay" hidden></div>
     <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
       <div class="drawer-header"><div><span class="eyebrow">THE GOOD STUFF</span><h2>Your bag <span class="drawer-count">(0)</span></h2></div><button class="drawer-close icon-button" type="button" aria-label="Close shopping bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button></div>
-      <div class="cart-items"></div>
-      <div class="cart-empty"><span aria-hidden="true">✳</span><h3>Your bag's taking a nap.</h3><p>Let's find something to wake it up.</p><button class="button button-dark continue-shopping" type="button">Explore good stuff <span aria-hidden="true">→</span></button></div>
-      <div class="drawer-footer" hidden><div class="shipping-note">You’re <strong class="shipping-remaining">KSh 10,000</strong> away from free shipping <span aria-hidden="true">↗</span></div><div class="shipping-progress"><span></span></div><div class="subtotal-row"><span>Subtotal</span><strong class="cart-subtotal">KSh 0</strong></div><p>Shipping and taxes calculated at checkout.</p><button class="button button-dark checkout-button" type="button">Continue to checkout <span aria-hidden="true">→</span></button></div>
+      <div class="cart-content">
+        <div class="cart-items"></div>
+        <div class="cart-empty"><span aria-hidden="true">✳</span><h3>Your bag's taking a nap.</h3><p>Let's find something to wake it up.</p><button class="button button-dark continue-shopping" type="button">Explore good stuff <span aria-hidden="true">→</span></button></div>
+        <div class="cart-totals">
+          <div class="subtotal-row"><span>Subtotal</span><strong class="cart-subtotal">KSh 0</strong></div>
+          <div class="subtotal-row cart-total-row"><span>Total</span><strong class="cart-total">KSh 0</strong></div>
+        </div>
+        <button class="button button-dark checkout-button" type="button">Proceed to Checkout <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="drawer-footer" hidden>
+        <div class="shipping-note">You’re <strong class="shipping-remaining">KSh 10,000</strong> away from free shipping <span aria-hidden="true">↗</span></div>
+        <div class="shipping-progress"><span></span></div>
+        <p>Demo only: shipping and taxes are not calculated.</p>
+      </div>
     </aside>
+    <dialog class="checkout-dialog" aria-labelledby="checkout-title">
+      <div class="checkout-dialog-header">
+        <div><span class="eyebrow">DEMO ORDER · PAYMENT NOT CONNECTED</span><h2 id="checkout-title">Delivery details</h2></div>
+        <button class="checkout-close icon-button" type="button" aria-label="Close checkout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button>
+      </div>
+      <p class="checkout-description">Review your items and enter the details for this demo order. No payment or delivery will be made.</p>
+      <form class="checkout-form">
+        <div class="checkout-summary">
+          <h3>Order summary</h3>
+          <div class="checkout-items"></div>
+          <div class="checkout-total"><span>Total</span><strong class="checkout-subtotal">KSh 0</strong></div>
+        </div>
+        <fieldset class="checkout-payment-method">
+          <legend>Payment method</legend>
+          <label class="checkout-payment-option">
+            <input type="radio" name="payment-method" value="mpesa-demo" checked required />
+            <span class="checkout-payment-copy">
+              <span class="checkout-payment-brand"><span class="checkout-mpesa-mark" aria-hidden="true">M</span><strong>M-Pesa STK Push</strong></span>
+              <small>Demo only · No real payment</small>
+            </span>
+            <span class="checkout-payment-selected">Selected</span>
+          </label>
+        </fieldset>
+        <div class="checkout-customer-fields">
+          <div class="checkout-field checkout-field-full">
+            <label for="checkout-name">Full name</label>
+            <input id="checkout-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="100" required />
+          </div>
+          <div class="checkout-field">
+            <label for="checkout-phone">Phone number</label>
+            <input id="checkout-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0712 345 678" title="Enter a Kenyan phone number, such as 0712 345 678." required />
+          </div>
+          <div class="checkout-field">
+            <label for="checkout-email">Email address</label>
+            <input id="checkout-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+          </div>
+          <div class="checkout-field checkout-field-full">
+            <label for="checkout-address">Delivery address</label>
+            <textarea id="checkout-address" name="address" autocomplete="street-address" rows="3" minlength="8" maxlength="300" required></textarea>
+          </div>
+        </div>
+        <p class="checkout-notice" role="status" aria-live="polite">Payment status will be Pending Payment. Orders are stored only in this browser.</p>
+        <div class="checkout-actions">
+          <button class="button checkout-cancel" type="button">Back to bag</button>
+          <button class="button button-dark checkout-submit" type="submit">Confirm demo order <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </dialog>
+    <dialog class="mpesa-demo-dialog" aria-labelledby="mpesa-demo-title">
+      <div class="checkout-dialog-header">
+        <div><span class="eyebrow">SIMULATION ONLY · NO PAYMENT SENT</span><h2 id="mpesa-demo-title">M-Pesa STK Push</h2></div>
+        <button class="mpesa-demo-close icon-button" type="button" aria-label="Close demo payment"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 18 6 6" /></svg></button>
+      </div>
+      <p class="checkout-description">This simulates an STK prompt. No request is sent to Safaricom and no money is transferred.</p>
+      <div class="mpesa-demo-summary">
+        <p><span>Order</span><strong class="mpesa-demo-order-id"></strong></p>
+        <p><span>Prompt number</span><strong class="mpesa-demo-phone"></strong></p>
+        <p><span>Amount</span><strong class="mpesa-demo-amount"></strong></p>
+      </div>
+      <section class="mpesa-pin-demo" aria-label="Simulated PIN screen">
+        <span class="eyebrow">DEMO PIN SCREEN</span>
+        <p>Demo keypad only. Never enter your real M-Pesa PIN; digits are not saved or sent.</p>
+        <div class="mpesa-pin-dots" role="status" aria-live="polite" aria-label="Demo PIN entry">○ ○ ○ ○</div>
+        <div class="mpesa-demo-keypad" aria-label="Demo keypad">
+          <button type="button" data-demo-pin-key="1">1</button><button type="button" data-demo-pin-key="2">2</button><button type="button" data-demo-pin-key="3">3</button>
+          <button type="button" data-demo-pin-key="4">4</button><button type="button" data-demo-pin-key="5">5</button><button type="button" data-demo-pin-key="6">6</button>
+          <button type="button" data-demo-pin-key="7">7</button><button type="button" data-demo-pin-key="8">8</button><button type="button" data-demo-pin-key="9">9</button>
+          <span aria-hidden="true"></span><button type="button" data-demo-pin-key="0">0</button><button type="button" data-demo-pin-key="backspace" aria-label="Clear one demo PIN dot">⌫</button>
+        </div>
+      </section>
+      <p class="mpesa-demo-notice" role="status" aria-live="polite">Choose a simulated outcome. No real payment will be made.</p>
+      <div class="mpesa-demo-actions">
+        <button class="button button-dark" type="button" data-demo-payment-outcome="Paid">Simulate success</button>
+        <button class="button mpesa-demo-secondary" type="button" data-demo-payment-outcome="Failed">Simulate failure</button>
+        <button class="button mpesa-demo-secondary" type="button" data-demo-payment-outcome="Cancelled">Cancel demo payment</button>
+      </div>
+    </dialog>
     <div class="toast" role="status" aria-live="polite"></div>
   </body>
 </html>
